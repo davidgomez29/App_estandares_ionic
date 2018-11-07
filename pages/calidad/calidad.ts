@@ -224,6 +224,11 @@ export class CalidadPage {
    
   }
 
+  public changuacodesmell(){
+    for(){
+    }
+  }
+  
 
 
 
