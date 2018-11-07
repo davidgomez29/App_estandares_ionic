@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Preguntas Proyecto de Software
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list-header>
+         <h1> Evaluacion</h1>
+  </ion-list-header>
+
+
+
+<button (click)="calcularfun()" ion-button block>Calcular Total Resultados</button>
+
+<h3> Funcionalidad </h3>
+
+
+<pre [hidden]="finalfun === null">El resultado de adecuacion es:                           {{finalfun}} de 8</pre>
+
+<pre [hidden]="finalpre === null">El resultado de precision es:                            {{finalpre}} de 11</pre>
+
+<pre [hidden]="finalint === null">El resultado de interoperabilidad es:                    {{finalint}} de 7</pre>
+
+<pre [hidden]="finalseg === null">El resultado de seguridad es:                            {{finalseg}} de 7</pre>
+
+<h3> Fiabilidad </h3>
+
+<pre [hidden]="finalmad === null">El resultado de madurez es:                            {{finalmad}} de 5</pre>
+
+<pre [hidden]="finaltolfa === null">El resultado de tolerancia a fallas es:                            {{finaltolfa}} de 5</pre>
+
+<pre [hidden]="finalrecu === null">El resultado de recuperacion es:                            {{finalrecu}} de 13</pre>
+
+<h3> Usabilidad </h3>
+
+<pre [hidden]="finalfacomp === null">El resultado de facilidad de comprension es:                            {{finalfacomp}} de 5</pre>
+
+<pre [hidden]="finalcapapre === null">El resultado de capacidad de aprendizaje es:                            {{finalcapapre}} de 5</pre>
+
+<pre [hidden]="finalintgraf === null">El resultado de interfaz grafica es:                            {{finalintgraf}} de 9</pre>
+
+<pre [hidden]="finalopera === null">El resultado de operabilidad es:                            {{finalopera}} de 5</pre>
+
+<pre [hidden]="finalconfest === null">El resultado de conformidad con los estandares es:                            {{finalconfest}} de 17</pre>
+
+
+<h3> Calidad </h3>
+
+<pre [hidden]="finalefic === null">El resultado de eficiencia es:                            {{finalefic}} de 5</pre>
+
+<pre [hidden]="finalmantenibi === null">El resultado de mantenibilidad es:                            {{finalmantenibi}} de 18</pre>
+
+<pre [hidden]="finalportabi === null">El resultado de portabilidad es:                            {{finalportabi}} de 13</pre>
+
+
+
+
+
+
+
+
+
+</ion-content>

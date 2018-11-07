@@ -1,0 +1,220 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Preguntas Proyecto de Software
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+    <ion-list-header>
+        <h1>  Usabilidad </h1>
+    </ion-list-header>
+
+    <p style="color: red">
+            Facilidad de comprension:
+      </p>
+
+      <ion-item>
+          <ion-label><h6>¿Es claro para el cliente el entendimiento de la pagina web para no recurrir a botones alternos buscando lo que requiere?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=facomp1 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿El cliente logra percibir con facilidad cada una de las opciones?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=facomp2 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿La ubicación de los botones es optima para una facilidad de comprension por parte de el cliente?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=facomp3 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Cada una de las caracteristicas del software estan alineadas para que el usuario final pueda acceder facilmente a sus requerimientos?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=facomp4 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿La aplicación cuenta con ayudas para que el usuario pueda entender lo que no entiende?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=facomp5 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+
+
+
+        <p style="color: red">
+            Capacidad de aprendizaje:
+      </p>
+
+      <ion-item>
+          <ion-label><h6>¿Brinda el proyecto alternativas para mejorar la capacidad de aprendizaje de quien hace uso del mismo?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=capapre1 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿El usuario aprende la aplicación gracias a sus requerimientos?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=capapre2 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿La aplicación puede aprender de los requerimientos del usuario?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=capapre3 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Las necesidades del usuario son optimas para que la aplicación aprenda de ellas?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=capapre4 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿El usuario puede aprender los procesos ejecutados por la aplicación o son implicitos?
+</h6></ion-label>
+          <ion-toggle checked="false" [(ngModel)]=capapre5 color="secondary"></ion-toggle>
+        </ion-item>
+
+
+
+
+        <p style="color: red">
+            Interfaz Grafica:
+      </p>
+
+      <ion-item>
+          <ion-label><h6>¿Existen contrastes o problemas de graficos que distraigan la atencion del cliente?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=intgraf1 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Los graficos de la aplicación se pueden configurar?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=intgraf2 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Se puede configurar la calidad de los graficos?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=intgraf3 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿La aplicación cuenta con ajustes de accesibilidad para personas con discapacidades visuales?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=intgraf4 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-list-header>
+          ¿Cómo calificaria de 1-10 la visibilidad de la aplicación?
+ {{calivisiapli}}
+          <ion-item>
+            <ion-range min="1" max="10" step="1" pin="true"  [(ngModel)]=calivisiapli color="danger">
+              <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+              <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+            </ion-range>
+          </ion-item>  
+         </ion-list-header>
+
+
+
+         <p style="color: red">
+            Operabilidad:
+      </p>
+
+      <ion-item>
+          <ion-label><h6>¿Se pueden realizar distintas operaciones de manera facil recordando facilmente la posicion de los botones?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=usaop1 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿La aplicación puede interactuar con aplicaciones externas?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=usaop2 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Hay mas de 5 opciones en el software que redifigan a sitios externos?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=usaop3 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿La rapidez de la aplicación es optima?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=usaop4 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Las necesidades del usuario son optimas respecto a lo que realiza la aplicación en funcion de sus requerimientos?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=usaop5 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+
+
+
+<p style="color: red">
+            Conformidad con los estandares:
+      </p>
+
+      <ion-item>
+          <ion-label><h6>¿Se evalua la conformidad con las metricas de software?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=conest1 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+          <ion-list-header>
+          ¿Cómo describiria la optimizacion de la aplicación?
+ {{nivelesCalidad[optiapli] }}
+          <ion-item>
+            <ion-range min="1" max="5"   step="1" pin="false"  [(ngModel)]=optiapli color="danger">
+              <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+              <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+            </ion-range>
+          </ion-item>
+        </ion-list-header>
+
+        <ion-list-header>
+          ¿La aplicación cumple con los estandares escritos previamente en la documentacion? {{nivelesCalidad[estandocu] }}
+          <ion-item>
+            <ion-range min="1" max="5"   step="1" pin="false"  [(ngModel)]=estandocu color="danger">
+              <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+              <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+            </ion-range>
+          </ion-item>
+        </ion-list-header>
+
+        <ion-list-header>
+          ¿Entre 1-10 como califica la funcionalidad de la aplicación en funcion del total de sus requerimientos?
+ {{cantcali}}
+          <ion-item>
+            <ion-range min="1" max="10" step="1" pin="true"  [(ngModel)]=cantcali2 color="danger">
+              <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+              <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+            </ion-range>
+          </ion-item>  
+         </ion-list-header>
+
+         <ion-item>
+          <ion-label><h6>¿Faltaron requerimientos por cumplirse ?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=conest5 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <button (click)="usabcalcular()" ion-button block  >Pasar a Calidad</button>
+
+
+
+
+</ion-content>

@@ -1,0 +1,133 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Preguntas Proyecto de Software
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list-header>
+         <h1> Fiabilidad</h1>
+  </ion-list-header>
+
+      <p  style="color: red">
+            Madurez:
+      </p>
+
+      <ion-item>
+          <ion-label><h6>¿El sitio se muestra como un alojamiento optimo, seguro y llamativo para el cliente por sus caracteristicas?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funmad1 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿El software cuenta con una documentacion adecuada para su calidad de uso?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funmad2 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Existe un documento previo a la realizacion del software basado en su estructura y pautas iniciales?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funmad3 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿La madurez del software es acorde con las estretegias planificadas de desarrollo en una previa documentacion?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funmad4 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Existe una logica entre cada accion realizada por el software?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funmad5 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+
+        <p style="color: red">
+            Tolerancia a fallas:
+      </p>
+
+      <ion-item>
+          <ion-label><h6>¿Cuenta el sitio con estandares externos exentos ante fallas alternas que puedan afectar la permanencia del usuario?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=tolfa1 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿El software tiene catacteristicas de ajuste según la calidad de graficos de cada dispositivo en que se corra?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=tolfa2 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿El software tiene catacteristicas de ajuste según la calidad de procesador de cada dispositivo en que se corra?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=tolfa3 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Cuenta con fallas de lentitud, desorden de graficos, alteraciones en las acciones o botones inservibles?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=tolfa4 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Las fallas del sofware afectan aplicaciones externas?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=tolfa5 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+
+
+
+        <p style="color: red">
+            Recuperacion:
+      </p>
+
+      <ion-item>
+          <ion-label><h6>¿Se recupera rapido ante una eventualidad no esperada?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=fiarec1 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿El reinicio de la aplicación es optimo y retorna a las caracteristicas iniciales antes del reinicio?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=fiarec2 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿La aplicación hace un backup constante sobre sus diversos datos nativos?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=fiarec3 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-list-header>
+          ¿De 0 a 10 que tan facil se abre la aplicación despues de un fallo? {{cantfacabr}}
+          <ion-item>
+            <ion-range min="0" max="10" step="1" pin="true"  [(ngModel)]=cantfacabr color="danger">
+              <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+              <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+            </ion-range>
+          </ion-item>  
+         </ion-list-header>
+
+        <ion-list-header>
+          ¿Cuál es la calidad de recuperacion de la aplicación despues de un laggeo? {{nivelesCalidad2[calrecu] }}
+          <ion-item>
+            <ion-range min="1" max="5"   step="1" pin="false"  [(ngModel)]=calrecu color="danger">
+              <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+              <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+            </ion-range>
+          </ion-item>
+        </ion-list-header>    
+
+        <button (click)="fiabcalcular()" ion-button block>Pasar a Usabilidad</button>
+
+
+
+</ion-content>

@@ -1,0 +1,157 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Preguntas Proyecto de Software
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+  <ion-list-header>
+         <h1> Calidad</h1>
+  </ion-list-header>
+
+  <p style="color: red">
+            Eficiencia:
+      </p>
+
+      <ion-item>
+          <ion-label><h6>¿La aplicación es eficiente(rapida) entre operaciones?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=efic1 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Cumple con el total de requerimientos del usuario?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=efic2 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Existen requerimientos sobrantes?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=efic3 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Las operaciones son complicadas o basicas para cualquier usuario?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=efic4 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Cuentan las operaciones con sus explicaciones para mas facil entendimiento?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=efic5 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+
+
+<p style="color: red"> 
+  Mantenibilidad:
+  </p>
+
+            <ion-list-header>
+                      ¿Entre 1-10 como califica la frecuencia de mantenibilidad que se le debe hacer a la aplicación basado en su experiencia? {{frecumant}}
+                      <ion-item>
+                        <ion-range min="1" max="10" step="1" pin="true"  [(ngModel)]=frecumant color="danger">
+                          <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+                          <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+                        </ion-range>
+                      </ion-item>  
+                    </ion-list-header>
+
+          <ion-item>
+          <ion-label><h6>¿Es necesaria arreglar varios detalles para que la aplicación mejore?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=mant2 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿El usuario puede apreciar cada una de las falencias de la aplicación de manera optima?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=mant3 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+
+        <ion-list-header>
+          ¿Cómo describiria la calidad de la aplicación respecto a los ajustes que se le deben hacer?
+ {{nivelesCalidad[ajustfu] }}
+          <ion-item>
+            <ion-range min="1" max="5"   step="1" pin="true"  [(ngModel)]=ajustfu color="danger">
+              <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+              <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+            </ion-range>
+          </ion-item>
+        </ion-list-header>
+
+
+        <ion-item>
+          <ion-label><h6>¿La mantenibilidad debe ser extremadamente frecuente a vision suya basado en las falencias?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=mant5 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+
+        <ion-list-header>
+          ¿Cómo describiria la calidad de la aplicación respecto a diseño teniendo en cuenta si debe hacer ajustes o no de mantenibilidad?
+ {{nivelesCalidad[calidi] }}
+          <ion-item>
+            <ion-range min="1" max="5"   step="1" pin="true"  [(ngModel)]=calidi color="danger">
+              <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+              <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+            </ion-range>
+          </ion-item>
+        </ion-list-header>
+
+
+
+
+<p style="color: red">
+            Portabilidad:
+      </p>
+
+      <ion-item>
+          <ion-label><h6>¿La aplicación permite ver el codigo fuente?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=porta1 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+     <ion-list-header>
+                      ¿Entre 1-10 como califica la aplicación bajo la plataforma en la que se encuentra creada?
+? {{plat}}
+                      <ion-item>
+                        <ion-range min="1" max="10" step="1" pin="true"  [(ngModel)]=plat color="danger">
+                          <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+                          <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+                        </ion-range>
+                      </ion-item>  
+                    </ion-list-header>   
+
+        <ion-item>
+          <ion-label><h6>¿Cambiaria la plataforma de la aplicación si estuviera en sus manos?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=porta3 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+       <ion-list-header>
+                      ¿Entre 1-10 considera que la aplicación es buena? {{considerac}}
+                      <ion-item>
+                        <ion-range min="1" max="10" step="1" pin="true"  [(ngModel)]=considerac color="danger">
+                          <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+                          <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+                        </ion-range>
+                      </ion-item>  
+                    </ion-list-header> 
+
+        <ion-item>
+          <ion-label><h6>¿El software permite la conexión con otros sistemas?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=porta5 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+      <button (click)="calicalcular()" ion-button block  >Pasar a Evaluacion de todos los parametros</button>
+        
+
+
+</ion-content>

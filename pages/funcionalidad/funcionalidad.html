@@ -1,0 +1,227 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Preguntas Proyecto de Software</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Bienvenido al banco de preguntas sobre la calidad externa de software</h2>
+  <p>
+    A continuacion se mostraran unas preguntas y sus correspondientes titulos
+  </p>
+
+    <ion-list>
+      <ion-list-header>
+          <h1>Funcionalidad</h1>
+      </ion-list-header>
+
+      <p style="color: red">
+            Adecuacion:
+      </p>
+
+        <ion-item>
+          <ion-label><h6>¿La adecuacion de las acciones brindadas son suficientes para satisfacer el objetivo del software?               </h6></ion-label>
+          <ion-toggle [(ngModel)]=funade1 checked="false" color="secondary" ></ion-toggle>
+        </ion-item>
+
+        
+
+        <ion-item>
+          <ion-label><h6>¿Existe idoneidad entre la necesidad del cliente y la funcion que otorga el software?</h6></ion-label>
+          <ion-toggle [(ngModel)]=funade2 checked="false" color="secondary"></ion-toggle>
+        
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Cumple cada boton con su funcion indicada?</h6></ion-label>
+          <ion-toggle [(ngModel)]=funade3 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+
+        <ion-list-header>
+          ¿Cuál es la cantidad de objetivos a los que el cliente puede acceder? {{cantobjetivos}}
+          <ion-item>
+            <ion-range min="0" max="1000" step="1" pin="true"  [(ngModel)]=cantobjetivos color="danger">
+              <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+              <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+            </ion-range>
+          </ion-item>  
+         </ion-list-header>
+
+         <ion-list-header>
+          ¿Cuál es la cantidad de objetivos especificados en el software en beneficio del cliente que se cumplen con eficacia? {{cantobjetivoscumplidos}}
+          <ion-item>
+            <ion-range min="0" max={{cantobjetivos}} step="1" pin="true"  [(ngModel)]=cantobjetivoscumplidos color="danger">
+              <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+              <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+            </ion-range>
+          </ion-item>
+        </ion-list-header>
+
+
+      <ion-list-header>
+          ¿Cómo es el tiempo de espera de ejecucion de la aplicación? {{nivelesCalidad[tiempoespera] }}
+          <ion-item>
+            <ion-range min="0" max="4"   step="1" pin="false"  [(ngModel)]=tiempoespera color="danger">
+              <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+              <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+            </ion-range>
+          </ion-item>
+        </ion-list-header>
+
+      <p style="color: red">
+            Precision:
+      </p>
+
+        <ion-item>
+          <ion-label><h6>¿Es la accion de los botones acorde con la funcion especificada en el boton previamente antes de presionarlo?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funpre1 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Los formularios proporcionan informacion suficiente para guiar al cliente en la presicion a la hora de contestar las preguntas?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funpre2 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Los datos que solicita el formulario al cliente son precisos con la necesidad del cliente?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funpre3 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Los datos de contacto del software cuentan con presicion clara para la visibilidad del cliente?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funpre4 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Los botones de acciones se encuentran inmersos con exactitud en las pestañas//paginas correspondientes?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funpre5 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Es acorde el software con lo que plantea en su mision a cumplir?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funpre6 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+      <ion-list-header>
+          ¿Cuál es la calificacion otorgada a la facilidad con la que el cliente puede encontrar con presicion las opciones o peticiones necesitadas?
+ {{cantcali}}
+          <ion-item>
+            <ion-range min="0" max="10" step="1" pin="true"  [(ngModel)]=cantcali color="danger">
+              <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+              <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+            </ion-range>
+          </ion-item>  
+         </ion-list-header>
+
+
+
+        <p style="color: red" >
+            Interoperabilidad:
+      </p>
+
+        <ion-item>
+          <ion-label><h6>¿Existe la posibilidad de realizar varias operaciones a traves del proyecto?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funint1 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Es posible conectar hardware externo para aumentar las funciones del software?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funint2 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Es necesaria el uso de aplicaciones externas para el funcionamiento del proyecto?               
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funint3 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿La aplicación permite las conexiones de otras funcionalidades externas pidiendo un previo permiso?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funint4 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Las diversas operaciones del software son suficientes para las acciones que requiere ejecutar el usuario?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funint5 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿La aplicación consume información de otro sistema?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funint6 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿La aplicación es consumida por otro sistema?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funint7 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+
+
+        
+
+      <p style="color: red">
+            Seguridad:
+      </p>
+
+        <ion-item>
+          <ion-label><h6>¿Se ven claras las funciones de seguridad para que el sitio inspire confianza?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funseg1 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿El uso de la aplicación esta sesgada para algun tipo de usuario especifico o cualquier usuario puede acceder a ella?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funseg2 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Hay informacion clara sobre el manejo que van a tener los datos suministrados en la aplicación por el usuario?         
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funseg3 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Los formularios cuentan con aceptacion de permisos de usuario sobre terminos y condiciones?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funseg4 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿Se requiere de diferentes niveles de autenticación?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funseg5 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿La capa de información es administrada por un servidor dedicado a parte de la aplicación?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funseg6 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><h6>¿La aplicación puede revocar permisos de forma dinámica?
+</h6></ion-label>
+          <ion-toggle [(ngModel)]=funseg7 checked="false" color="secondary"></ion-toggle>
+        </ion-item>
+
+<button (click)="funcalcular()" ion-button block  >Pasar a Fiabilidad</button>
+
+       
+
+
+    </ion-list  >
+</ion-content>
